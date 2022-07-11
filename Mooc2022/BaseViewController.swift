@@ -11,7 +11,8 @@ class BaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("ViewController \(self)")
+        print("ViewController \(type(of: self))")
+        print("ViewController.Xib \(self.nibName ?? "dont know")")
     }
 
 }
