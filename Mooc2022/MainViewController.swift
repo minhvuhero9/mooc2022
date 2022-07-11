@@ -8,16 +8,16 @@
 import UIKit
 
 class MainViewController: UITabBarController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let homeViewController = HomeViewController()
-        homeViewController.title = "Home"
-        homeViewController.tabBarItem.image = UIImage.init(systemName: "house")
-        let listViewController = ListViewController()
-        listViewController.title = "List"
-        listViewController.tabBarItem.image = UIImage.init(systemName: "music.note.list")
+        let home = UINavigationController(rootViewController: HomeViewController())
+        home.title = "Home"
+        home.tabBarItem.image = UIImage.init(systemName: "house")
+        let list = UINavigationController(rootViewController: ListViewController())
+        list.title = "List"
+        list.tabBarItem.image = UIImage.init(systemName: "music.note.list")
         self.tabBar.backgroundColor = .white
-        self.viewControllers = [homeViewController, listViewController]
+        self.viewControllers = [home, list]
     }
 }
