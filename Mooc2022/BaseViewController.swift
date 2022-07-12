@@ -13,6 +13,7 @@ class BaseViewController: UIViewController {
         super.viewDidLoad()
         print("ViewController \(type(of: self))")
         print("ViewController.Xib \(self.nibName ?? "dont know")")
+        self.navigationController?.navigationBar.backgroundColor = .white
     }
 
 }
