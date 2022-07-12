@@ -17,6 +17,8 @@
 		215F5500287C281B00B6653A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215F54FF287C281B00B6653A /* MainViewController.swift */; };
 		215F5503287C287F00B6653A /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215F5501287C287F00B6653A /* ListViewController.swift */; };
 		215F5504287C287F00B6653A /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 215F5502287C287F00B6653A /* ListViewController.xib */; };
+		E856AC15287D45A10069C3B4 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E856AC13287D45A10069C3B4 /* MovieCell.swift */; };
+		E856AC16287D45A10069C3B4 /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E856AC14287D45A10069C3B4 /* MovieCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		215F54FF287C281B00B6653A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		215F5501287C287F00B6653A /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		215F5502287C287F00B6653A /* ListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListViewController.xib; sourceTree = "<group>"; };
+		E856AC13287D45A10069C3B4 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		E856AC14287D45A10069C3B4 /* MovieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,8 @@
 				215F5501287C287F00B6653A /* ListViewController.swift */,
 				215F5502287C287F00B6653A /* ListViewController.xib */,
 				215F54FF287C281B00B6653A /* MainViewController.swift */,
+				E856AC13287D45A10069C3B4 /* MovieCell.swift */,
+				E856AC14287D45A10069C3B4 /* MovieCell.xib */,
 			);
 			path = Mooc2022;
 			sourceTree = "<group>";
@@ -141,6 +147,7 @@
 				215F54EF287C1CD400B6653A /* Assets.xcassets in Resources */,
 				215F5504287C287F00B6653A /* ListViewController.xib in Resources */,
 				215F54FE287C1EA700B6653A /* HomeViewController.xib in Resources */,
+				E856AC16287D45A10069C3B4 /* MovieCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +158,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E856AC15287D45A10069C3B4 /* MovieCell.swift in Sources */,
 				215F54FD287C1EA700B6653A /* HomeViewController.swift in Sources */,
 				215F54FA287C1E6700B6653A /* BaseViewController.swift in Sources */,
 				215F5503287C287F00B6653A /* ListViewController.swift in Sources */,
