@@ -22,6 +22,19 @@
 		21B3BD35287FBAA900363C06 /* BaseNibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B3BD34287FBAA900363C06 /* BaseNibView.swift */; };
 		21B3BD38287FBAE500363C06 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B3BD37287FBAE500363C06 /* DataManager.swift */; };
 		21B3BD3D287FC29800363C06 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B3BD3C287FC29800363C06 /* UIView+Extensions.swift */; };
+		21B3BD40287FC65500363C06 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B3BD3F287FC65500363C06 /* Endpoint.swift */; };
+		21B3BD42287FC6E000363C06 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B3BD41287FC6E000363C06 /* NetworkManager.swift */; };
+		21B3BD45287FC76100363C06 /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B3BD44287FC76100363C06 /* ConnectionManager.swift */; };
+		21B3BD47287FC8A200363C06 /* StringConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B3BD46287FC8A200363C06 /* StringConstant.swift */; };
+		21B3BD4A287FD05100363C06 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B3BD49287FD05100363C06 /* AuthenticationManager.swift */; };
+		21B3BD4D287FD0D100363C06 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B3BD4C287FD0D100363C06 /* Authentication.swift */; };
+		21B3BD51287FF94500363C06 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B3BD4F287FF94500363C06 /* LoginViewController.swift */; };
+		21B3BD52287FF94500363C06 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21B3BD50287FF94500363C06 /* LoginViewController.xib */; };
+		21B3BD54287FF99000363C06 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B3BD53287FF99000363C06 /* LoginViewModel.swift */; };
+		21B3BD5728801D8D00363C06 /* ListMovieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B3BD5628801D8D00363C06 /* ListMovieManager.swift */; };
+		21B3BD5928808AEC00363C06 /* ListMovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B3BD5828808AEC00363C06 /* ListMovieModel.swift */; };
+		21B3BD5B28808B2400363C06 /* ListMovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B3BD5A28808B2400363C06 /* ListMovieViewModel.swift */; };
+		21B3BD5D2880980F00363C06 /* CustomCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B3BD5C2880980F00363C06 /* CustomCollectionViewLayout.swift */; };
 		29788D778E9E8374DA334D18 /* Pods_Mooc2022.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF0F97197EE4981FBB83B77 /* Pods_Mooc2022.framework */; };
 		E856AC15287D45A10069C3B4 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E856AC13287D45A10069C3B4 /* MovieCell.swift */; };
 		E856AC16287D45A10069C3B4 /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E856AC14287D45A10069C3B4 /* MovieCell.xib */; };
@@ -45,6 +58,19 @@
 		21B3BD34287FBAA900363C06 /* BaseNibView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNibView.swift; sourceTree = "<group>"; };
 		21B3BD37287FBAE500363C06 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		21B3BD3C287FC29800363C06 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		21B3BD3F287FC65500363C06 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Endpoint.swift; path = Mooc2022/Extensions/Endpoint.swift; sourceTree = SOURCE_ROOT; };
+		21B3BD41287FC6E000363C06 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkManager.swift; path = Mooc2022/Extensions/NetworkManager.swift; sourceTree = SOURCE_ROOT; };
+		21B3BD44287FC76100363C06 /* ConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
+		21B3BD46287FC8A200363C06 /* StringConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstant.swift; sourceTree = "<group>"; };
+		21B3BD49287FD05100363C06 /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
+		21B3BD4C287FD0D100363C06 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		21B3BD4F287FF94500363C06 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		21B3BD50287FF94500363C06 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		21B3BD53287FF99000363C06 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		21B3BD5628801D8D00363C06 /* ListMovieManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMovieManager.swift; sourceTree = "<group>"; };
+		21B3BD5828808AEC00363C06 /* ListMovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMovieModel.swift; sourceTree = "<group>"; };
+		21B3BD5A28808B2400363C06 /* ListMovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMovieViewModel.swift; sourceTree = "<group>"; };
+		21B3BD5C2880980F00363C06 /* CustomCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewLayout.swift; sourceTree = "<group>"; };
 		35F6A1968FEE67553E06B453 /* Pods-Mooc2022.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mooc2022.debug.xcconfig"; path = "Target Support Files/Pods-Mooc2022/Pods-Mooc2022.debug.xcconfig"; sourceTree = "<group>"; };
 		459564C6E5E6F6CBFE11A8AC /* Pods-Mooc2022.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mooc2022.release.xcconfig"; path = "Target Support Files/Pods-Mooc2022/Pods-Mooc2022.release.xcconfig"; sourceTree = "<group>"; };
 		CEF0F97197EE4981FBB83B77 /* Pods_Mooc2022.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mooc2022.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +128,8 @@
 		218B0678287FB84400EB4430 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				21B3BD4E287FF92700363C06 /* Login */,
+				21B3BD4B287FD0C400363C06 /* Authentication */,
 				218B067D287FB8A700EB4430 /* Home */,
 				218B067C287FB89500EB4430 /* Base */,
 				218B0679287FB84C00EB4430 /* ListMovie */,
@@ -113,18 +141,20 @@
 			isa = PBXGroup;
 			children = (
 				218B067B287FB87300EB4430 /* View */,
-				218B067A287FB86800EB4430 /* ViewModel */,
+				218B067A287FB86800EB4430 /* Model */,
+				21B3BD5A28808B2400363C06 /* ListMovieViewModel.swift */,
 				215F5501287C287F00B6653A /* ListViewController.swift */,
 				215F5502287C287F00B6653A /* ListViewController.xib */,
 			);
 			name = ListMovie;
 			sourceTree = "<group>";
 		};
-		218B067A287FB86800EB4430 /* ViewModel */ = {
+		218B067A287FB86800EB4430 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				21B3BD5828808AEC00363C06 /* ListMovieModel.swift */,
 			);
-			name = ViewModel;
+			name = Model;
 			sourceTree = "<group>";
 		};
 		218B067B287FB87300EB4430 /* View */ = {
@@ -158,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				21B3BD2E287FBA1E00363C06 /* Constant.swift */,
+				21B3BD46287FC8A200363C06 /* StringConstant.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -175,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				21B3BD34287FBAA900363C06 /* BaseNibView.swift */,
+				21B3BD5C2880980F00363C06 /* CustomCollectionViewLayout.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -182,6 +214,9 @@
 		21B3BD36287FBAC700363C06 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				21B3BD5528801D7400363C06 /* ListMovie */,
+				21B3BD48287FD02D00363C06 /* Authentication */,
+				21B3BD43287FC74F00363C06 /* Connection */,
 				21B3BD39287FBB2B00363C06 /* Network */,
 				21B3BD37287FBAE500363C06 /* DataManager.swift */,
 			);
@@ -191,8 +226,52 @@
 		21B3BD39287FBB2B00363C06 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				21B3BD3F287FC65500363C06 /* Endpoint.swift */,
+				21B3BD41287FC6E000363C06 /* NetworkManager.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		21B3BD43287FC74F00363C06 /* Connection */ = {
+			isa = PBXGroup;
+			children = (
+				21B3BD44287FC76100363C06 /* ConnectionManager.swift */,
+			);
+			path = Connection;
+			sourceTree = "<group>";
+		};
+		21B3BD48287FD02D00363C06 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				21B3BD49287FD05100363C06 /* AuthenticationManager.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		21B3BD4B287FD0C400363C06 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				21B3BD4C287FD0D100363C06 /* Authentication.swift */,
+			);
+			name = Authentication;
+			sourceTree = "<group>";
+		};
+		21B3BD4E287FF92700363C06 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				21B3BD4F287FF94500363C06 /* LoginViewController.swift */,
+				21B3BD50287FF94500363C06 /* LoginViewController.xib */,
+				21B3BD53287FF99000363C06 /* LoginViewModel.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		21B3BD5528801D7400363C06 /* ListMovie */ = {
+			isa = PBXGroup;
+			children = (
+				21B3BD5628801D8D00363C06 /* ListMovieManager.swift */,
+			);
+			path = ListMovie;
 			sourceTree = "<group>";
 		};
 		2BAA36429EDF83C6058577D5 /* Frameworks */ = {
@@ -209,7 +288,6 @@
 				35F6A1968FEE67553E06B453 /* Pods-Mooc2022.debug.xcconfig */,
 				459564C6E5E6F6CBFE11A8AC /* Pods-Mooc2022.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -275,6 +353,7 @@
 			files = (
 				215F54F2287C1CD400B6653A /* LaunchScreen.storyboard in Resources */,
 				215F54EF287C1CD400B6653A /* Assets.xcassets in Resources */,
+				21B3BD52287FF94500363C06 /* LoginViewController.xib in Resources */,
 				215F5504287C287F00B6653A /* ListViewController.xib in Resources */,
 				215F54FE287C1EA700B6653A /* HomeViewController.xib in Resources */,
 				E856AC16287D45A10069C3B4 /* MovieCell.xib in Resources */,
@@ -330,18 +409,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21B3BD47287FC8A200363C06 /* StringConstant.swift in Sources */,
 				E856AC15287D45A10069C3B4 /* MovieCell.swift in Sources */,
 				215F54FD287C1EA700B6653A /* HomeViewController.swift in Sources */,
 				215F54FA287C1E6700B6653A /* BaseViewController.swift in Sources */,
+				21B3BD51287FF94500363C06 /* LoginViewController.swift in Sources */,
+				21B3BD40287FC65500363C06 /* Endpoint.swift in Sources */,
 				21B3BD2F287FBA1E00363C06 /* Constant.swift in Sources */,
 				21B3BD32287FBA5B00363C06 /* String+Extensions.swift in Sources */,
+				21B3BD54287FF99000363C06 /* LoginViewModel.swift in Sources */,
 				215F5503287C287F00B6653A /* ListViewController.swift in Sources */,
 				21B3BD3D287FC29800363C06 /* UIView+Extensions.swift in Sources */,
 				215F54E6287C1CD200B6653A /* AppDelegate.swift in Sources */,
 				21B3BD35287FBAA900363C06 /* BaseNibView.swift in Sources */,
+				21B3BD45287FC76100363C06 /* ConnectionManager.swift in Sources */,
+				21B3BD42287FC6E000363C06 /* NetworkManager.swift in Sources */,
 				21B3BD38287FBAE500363C06 /* DataManager.swift in Sources */,
 				215F54E8287C1CD200B6653A /* SceneDelegate.swift in Sources */,
 				215F5500287C281B00B6653A /* MainViewController.swift in Sources */,
+				21B3BD5928808AEC00363C06 /* ListMovieModel.swift in Sources */,
+				21B3BD5B28808B2400363C06 /* ListMovieViewModel.swift in Sources */,
+				21B3BD4A287FD05100363C06 /* AuthenticationManager.swift in Sources */,
+				21B3BD5728801D8D00363C06 /* ListMovieManager.swift in Sources */,
+				21B3BD5D2880980F00363C06 /* CustomCollectionViewLayout.swift in Sources */,
+				21B3BD4D287FD0D100363C06 /* Authentication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

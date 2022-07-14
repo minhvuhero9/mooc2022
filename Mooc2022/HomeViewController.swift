@@ -8,10 +8,14 @@
 import UIKit
 
 class HomeViewController: BaseViewController {
-
+    let viewModel = ListMovieViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        title = "Home"
+        viewModel.getListMovies()
+        viewModel.getListMoviesSuccess = {
+            print("success")
+            print("\(self.viewModel.listMovies)")
+        }
     }
 }
