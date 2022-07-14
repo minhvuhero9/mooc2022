@@ -8,5 +8,6 @@ target 'Mooc2022' do
   # Pods for Mooc2022
   pod 'Alamofire', '~> 5.4.3'
   pod 'ReachabilitySwift', '~> 5.0.0'
+  pod 'Kingfisher', '~> 7.0'
 
 end

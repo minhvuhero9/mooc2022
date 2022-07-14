@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class MovieCell: UICollectionViewCell {
 
@@ -30,8 +31,14 @@ class MovieCell: UICollectionViewCell {
 
 // MARK: Configure
 extension MovieCell {
-    func configureCell(image: UIImage, title: String) {
-        imageView.image = image
+    func configureCell(model: MovieModel) {
+        guard let image = model.posterPath else {
+            return
+        }
+        guard let title = model.title else {
+            return
+        }
+        imageView.kf.setImage(with: DataManager.getImageURL(image))
         titleLabel.text = title
     }
 }

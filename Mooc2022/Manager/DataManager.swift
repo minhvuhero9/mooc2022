@@ -20,4 +20,12 @@ class DataManager {
         }
         return dataManager
     }
+    
+    public class func getImageURL(_ name: String?) -> URL? {
+        guard let name = name,
+              let escapedString = name.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else {
+                  return nil
+              }
+        return URL(string: NetworkManager.shared.baseURLImage + escapedString)
+    }
 }
