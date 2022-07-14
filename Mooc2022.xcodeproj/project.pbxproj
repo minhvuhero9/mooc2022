@@ -22,6 +22,7 @@
 		21B3BD35287FBAA900363C06 /* BaseNibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B3BD34287FBAA900363C06 /* BaseNibView.swift */; };
 		21B3BD38287FBAE500363C06 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B3BD37287FBAE500363C06 /* DataManager.swift */; };
 		21B3BD3D287FC29800363C06 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B3BD3C287FC29800363C06 /* UIView+Extensions.swift */; };
+		29788D778E9E8374DA334D18 /* Pods_Mooc2022.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF0F97197EE4981FBB83B77 /* Pods_Mooc2022.framework */; };
 		E856AC15287D45A10069C3B4 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E856AC13287D45A10069C3B4 /* MovieCell.swift */; };
 		E856AC16287D45A10069C3B4 /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E856AC14287D45A10069C3B4 /* MovieCell.xib */; };
 /* End PBXBuildFile section */
@@ -44,6 +45,9 @@
 		21B3BD34287FBAA900363C06 /* BaseNibView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNibView.swift; sourceTree = "<group>"; };
 		21B3BD37287FBAE500363C06 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		21B3BD3C287FC29800363C06 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		35F6A1968FEE67553E06B453 /* Pods-Mooc2022.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mooc2022.debug.xcconfig"; path = "Target Support Files/Pods-Mooc2022/Pods-Mooc2022.debug.xcconfig"; sourceTree = "<group>"; };
+		459564C6E5E6F6CBFE11A8AC /* Pods-Mooc2022.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mooc2022.release.xcconfig"; path = "Target Support Files/Pods-Mooc2022/Pods-Mooc2022.release.xcconfig"; sourceTree = "<group>"; };
+		CEF0F97197EE4981FBB83B77 /* Pods_Mooc2022.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mooc2022.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E856AC13287D45A10069C3B4 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		E856AC14287D45A10069C3B4 /* MovieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -53,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29788D778E9E8374DA334D18 /* Pods_Mooc2022.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +69,8 @@
 			children = (
 				215F54E4287C1CD200B6653A /* Mooc2022 */,
 				215F54E3287C1CD200B6653A /* Products */,
+				B41A7E9E3D63521DE2F2A39A /* Pods */,
+				2BAA36429EDF83C6058577D5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -188,6 +195,24 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		2BAA36429EDF83C6058577D5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CEF0F97197EE4981FBB83B77 /* Pods_Mooc2022.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B41A7E9E3D63521DE2F2A39A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				35F6A1968FEE67553E06B453 /* Pods-Mooc2022.debug.xcconfig */,
+				459564C6E5E6F6CBFE11A8AC /* Pods-Mooc2022.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -195,9 +220,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 215F54F6287C1CD400B6653A /* Build configuration list for PBXNativeTarget "Mooc2022" */;
 			buildPhases = (
+				72E0441B047C9DF7EB57BF31 /* [CP] Check Pods Manifest.lock */,
 				215F54DE287C1CD200B6653A /* Sources */,
 				215F54DF287C1CD200B6653A /* Frameworks */,
 				215F54E0287C1CD200B6653A /* Resources */,
+				E5B7E89ABDE8D7D5FFC2C8D6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -255,6 +282,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		72E0441B047C9DF7EB57BF31 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mooc2022-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5B7E89ABDE8D7D5FFC2C8D6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mooc2022/Pods-Mooc2022-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mooc2022/Pods-Mooc2022-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mooc2022/Pods-Mooc2022-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		215F54DE287C1CD200B6653A /* Sources */ = {
@@ -406,6 +475,7 @@
 		};
 		215F54F7287C1CD400B6653A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35F6A1968FEE67553E06B453 /* Pods-Mooc2022.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -433,6 +503,7 @@
 		};
 		215F54F8287C1CD400B6653A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 459564C6E5E6F6CBFE11A8AC /* Pods-Mooc2022.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
