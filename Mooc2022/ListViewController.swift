@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ListViewController: BaseViewController {
 
@@ -13,9 +14,7 @@ class ListViewController: BaseViewController {
     @IBOutlet weak private var collectionView: UICollectionView!
     
     // MARK: Properties
-    private let cellSpacing: CGFloat = 1
-    private var numberColumn: CGFloat = 3
-    private let heightTitle: CGFloat = 73
+    let defaultHeightCell: CGFloat = 200
     
     let viewModel = ListMovieViewModel()
 
@@ -37,34 +36,28 @@ private extension ListViewController {
     func configureView() {
         configureNavigationController()
         configureCollectionView()
+        configureCollectionViewLayout()
     }
     
     func configureNavigationController() {
         title = "Movie List"
-        let gridButton = UIBarButtonItem(image: UIImage(systemName: "square.grid.2x2"), style: .plain, target: self, action: #selector(gridAction(_:)))
-        gridButton.tintColor = UIColor.black
-        navigationItem.rightBarButtonItem = gridButton
     }
     
     func configureCollectionView() {
         let movieNib = UINib(nibName: "MovieCell", bundle: nil)
         collectionView.register(movieNib, forCellWithReuseIdentifier: MovieCell.identifier)
     }
+    
+    func configureCollectionViewLayout() {
+        if let layout = collectionView?.collectionViewLayout as? CustomCollectionViewLayout {
+          layout.delegate = self
+        }
+    }
 }
 
 // MARK: Action
 private extension ListViewController {
-    @objc
-    func gridAction(_ sender: UIBarButtonItem) {
-        if numberColumn > 1 {
-            sender.image = UIImage(systemName: "rectangle.grid.1x2")
-            numberColumn = 1
-        } else {
-            sender.image = UIImage(systemName: "square.grid.2x2")
-            numberColumn = 3
-        }
-        collectionView.collectionViewLayout.invalidateLayout()
-    }
+    
 }
 
 // MARK: CollectionView DataSource
@@ -85,20 +78,18 @@ extension ListViewController: UICollectionViewDelegate {
     
 }
 
-// MARK: UICollectionViewDelegateFlowLayout
-extension ListViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let layout = collectionViewLayout as! UICollectionViewFlowLayout
-        let emptySpace = layout.sectionInset.left + layout.sectionInset.right + (numberColumn * cellSpacing - 1)
-        let cellSize = (view.frame.size.width - emptySpace) / numberColumn
-      return CGSize(width: cellSize, height: cellSize + heightTitle)
-    }
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-      return cellSpacing
-    }
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-      return cellSpacing
-    }
+// MARK: CustomCollectionViewLayoutDelegate
+extension ListViewController: CustomCollectionViewLayoutDelegate {
+  func collectionView(
+    _ collectionView: UICollectionView,
+    heightForPhotoAtIndexPath indexPath:IndexPath) -> CGFloat {
+        let model = self.viewModel.listMovies[indexPath.row];
+        guard let image = model.posterPath else {
+            return 0
+        }
+        let imageView = UIImageView()
+        imageView.kf.setImage(with: DataManager.getImageURL(image))
+        let heightImage = imageView.image?.size.height ?? defaultHeightCell
+        return heightImage
+  }
 }
