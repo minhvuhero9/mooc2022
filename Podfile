@@ -9,5 +9,6 @@ target 'Mooc2022' do
   pod 'Alamofire', '~> 5.4.3'
   pod 'ReachabilitySwift', '~> 5.0.0'
   pod 'Kingfisher', '~> 7.0'
-
+  # Pods for MyRealmProject
+  pod 'RealmSwift', '~>10'
 end
