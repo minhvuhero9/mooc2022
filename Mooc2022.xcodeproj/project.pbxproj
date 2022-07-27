@@ -17,6 +17,8 @@
 		215F5500287C281B00B6653A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215F54FF287C281B00B6653A /* MainViewController.swift */; };
 		215F5503287C287F00B6653A /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215F5501287C287F00B6653A /* ListViewController.swift */; };
 		215F5504287C287F00B6653A /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 215F5502287C287F00B6653A /* ListViewController.xib */; };
+		216057F0288E84ED00668604 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216057EF288E84ED00668604 /* Coordinator.swift */; };
+		216057F2288E856100668604 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216057F1288E856100668604 /* LoginCoordinator.swift */; };
 		21B3BD2F287FBA1E00363C06 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B3BD2E287FBA1E00363C06 /* Constant.swift */; };
 		21B3BD32287FBA5B00363C06 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B3BD31287FBA5B00363C06 /* String+Extensions.swift */; };
 		21B3BD35287FBAA900363C06 /* BaseNibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B3BD34287FBAA900363C06 /* BaseNibView.swift */; };
@@ -35,6 +37,7 @@
 		21B3BD5928808AEC00363C06 /* ListMovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B3BD5828808AEC00363C06 /* ListMovieModel.swift */; };
 		21B3BD5B28808B2400363C06 /* ListMovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B3BD5A28808B2400363C06 /* ListMovieViewModel.swift */; };
 		21B3BD5D2880980F00363C06 /* CustomCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B3BD5C2880980F00363C06 /* CustomCollectionViewLayout.swift */; };
+		21B4562A288F8D70006B42D5 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B45629288F8D70006B42D5 /* MainCoordinator.swift */; };
 		29788D778E9E8374DA334D18 /* Pods_Mooc2022.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF0F97197EE4981FBB83B77 /* Pods_Mooc2022.framework */; };
 		E856AC15287D45A10069C3B4 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E856AC13287D45A10069C3B4 /* MovieCell.swift */; };
 		E856AC16287D45A10069C3B4 /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E856AC14287D45A10069C3B4 /* MovieCell.xib */; };
@@ -53,6 +56,8 @@
 		215F54FF287C281B00B6653A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		215F5501287C287F00B6653A /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		215F5502287C287F00B6653A /* ListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListViewController.xib; sourceTree = "<group>"; };
+		216057EF288E84ED00668604 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		216057F1288E856100668604 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		21B3BD2E287FBA1E00363C06 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		21B3BD31287FBA5B00363C06 /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		21B3BD34287FBAA900363C06 /* BaseNibView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNibView.swift; sourceTree = "<group>"; };
@@ -71,6 +76,7 @@
 		21B3BD5828808AEC00363C06 /* ListMovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMovieModel.swift; sourceTree = "<group>"; };
 		21B3BD5A28808B2400363C06 /* ListMovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMovieViewModel.swift; sourceTree = "<group>"; };
 		21B3BD5C2880980F00363C06 /* CustomCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewLayout.swift; sourceTree = "<group>"; };
+		21B45629288F8D70006B42D5 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		35F6A1968FEE67553E06B453 /* Pods-Mooc2022.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mooc2022.debug.xcconfig"; path = "Target Support Files/Pods-Mooc2022/Pods-Mooc2022.debug.xcconfig"; sourceTree = "<group>"; };
 		459564C6E5E6F6CBFE11A8AC /* Pods-Mooc2022.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mooc2022.release.xcconfig"; path = "Target Support Files/Pods-Mooc2022/Pods-Mooc2022.release.xcconfig"; sourceTree = "<group>"; };
 		CEF0F97197EE4981FBB83B77 /* Pods_Mooc2022.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mooc2022.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +117,7 @@
 		215F54E4287C1CD200B6653A /* Mooc2022 */ = {
 			isa = PBXGroup;
 			children = (
+				216057EE288E7F3F00668604 /* Coordinators */,
 				218B0678287FB84400EB4430 /* Feature */,
 				218B067E287FB8EB00EB4430 /* Utils */,
 				21B3BD30287FBA5B00363C06 /* Extensions */,
@@ -123,6 +130,16 @@
 				215F54F3287C1CD400B6653A /* Info.plist */,
 			);
 			path = Mooc2022;
+			sourceTree = "<group>";
+		};
+		216057EE288E7F3F00668604 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				216057EF288E84ED00668604 /* Coordinator.swift */,
+				216057F1288E856100668604 /* LoginCoordinator.swift */,
+				21B45629288F8D70006B42D5 /* MainCoordinator.swift */,
+			);
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 		218B0678287FB84400EB4430 /* Feature */ = {
@@ -413,12 +430,14 @@
 				E856AC15287D45A10069C3B4 /* MovieCell.swift in Sources */,
 				215F54FD287C1EA700B6653A /* HomeViewController.swift in Sources */,
 				215F54FA287C1E6700B6653A /* BaseViewController.swift in Sources */,
+				216057F2288E856100668604 /* LoginCoordinator.swift in Sources */,
 				21B3BD51287FF94500363C06 /* LoginViewController.swift in Sources */,
 				21B3BD40287FC65500363C06 /* Endpoint.swift in Sources */,
 				21B3BD2F287FBA1E00363C06 /* Constant.swift in Sources */,
 				21B3BD32287FBA5B00363C06 /* String+Extensions.swift in Sources */,
 				21B3BD54287FF99000363C06 /* LoginViewModel.swift in Sources */,
 				215F5503287C287F00B6653A /* ListViewController.swift in Sources */,
+				21B4562A288F8D70006B42D5 /* MainCoordinator.swift in Sources */,
 				21B3BD3D287FC29800363C06 /* UIView+Extensions.swift in Sources */,
 				215F54E6287C1CD200B6653A /* AppDelegate.swift in Sources */,
 				21B3BD35287FBAA900363C06 /* BaseNibView.swift in Sources */,
@@ -431,6 +450,7 @@
 				21B3BD5B28808B2400363C06 /* ListMovieViewModel.swift in Sources */,
 				21B3BD4A287FD05100363C06 /* AuthenticationManager.swift in Sources */,
 				21B3BD5728801D8D00363C06 /* ListMovieManager.swift in Sources */,
+				216057F0288E84ED00668604 /* Coordinator.swift in Sources */,
 				21B3BD5D2880980F00363C06 /* CustomCollectionViewLayout.swift in Sources */,
 				21B3BD4D287FD0D100363C06 /* Authentication.swift in Sources */,
 			);
