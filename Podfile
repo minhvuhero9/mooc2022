@@ -11,4 +11,10 @@ target 'Mooc2022' do
   pod 'Kingfisher', '~> 7.0'
   # Pods for MyRealmProject
   pod 'RealmSwift', '~>10'
+
+  pod 'GoogleSignIn'
+  pod 'FirebaseAuth'
+  pod 'FirebaseDatabase'
+  pod 'CodableFirebase'
+  pod 'FBSDKLoginKit'
 end
