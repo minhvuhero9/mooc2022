@@ -8,6 +8,7 @@
 import UIKit
 
 class LoginViewController: BaseViewController {
+    weak var coordinator: LoginCoordinator?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,8 +17,7 @@ class LoginViewController: BaseViewController {
     }
 
     @IBAction func loginPressed(_ sender: Any) {
-        let main = MainViewController()
-        navigationController?.pushViewController(main, animated: false)
+        coordinator?.loginSuccess()
     }
 
 }

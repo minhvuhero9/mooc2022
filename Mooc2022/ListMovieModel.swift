@@ -7,42 +7,40 @@
 
 import UIKit
 
-struct ListMovieModel {
-    let id: Int?
-    let totalResult: Int?
-    let results: [MovieModel]?
-}
-
-extension ListMovieModel: Decodable {
-    enum CodingKeys: String, CodingKey {
-        case id
-        case totalResult = "total_results"
-        case results
-    }
-}
-
-struct MovieModel {
-    let adult: Bool?
-    let backdropPath: String?
-    let id: Int?
-    let mediaType: String
-    let originalTitle: String?
-    let overview: String?
-    let posterPath: String?
-    let releaseDate: String?
-    let title: String?
+class ListMovieModel: ListMovieModelProtocol {
+    var movies: [Movie]
     
-}
-extension MovieModel: Decodable {
-    enum CodingKeys: String, CodingKey {
-        case adult
-        case backdropPath = "backdrop_path"
-        case id
-        case mediaType = "media_type"
-        case originalTitle = "original_title"
-        case overview
-        case posterPath = "poster_path"
-        case releaseDate = "release_date"
-        case title
+    var repo: MovieRepositoryProtocol
+    
+    init(movies: [Movie], repo: MovieRepositoryProtocol) {
+        self.movies = movies
+        self.repo = repo
+    }
+    
+    func fetchAllMovies() {
+        self.movies = repo.fetchAllMovies()
+    }
+    
+    func saveMovie(movie: Movie) {
+        repo.saveMovie(movie: movie)
+    }
+    
+    func logURL() {
+        print("REALM URL \(repo.getDatabaseURL())")
+    }
+    
+    func fetchMovieFromSever() {
+        NetworkManager.shared.getListMovie { result in
+            switch result {
+            case.success(let data):
+                let movies = data.results
+                for item in movies {
+                    self.saveMovie(movie: item)
+                }
+            case.failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
 }
+
