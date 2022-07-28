@@ -19,13 +19,20 @@
 		215F5504287C287F00B6653A /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 215F5502287C287F00B6653A /* ListViewController.xib */; };
 		216057F0288E84ED00668604 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216057EF288E84ED00668604 /* Coordinator.swift */; };
 		216057F2288E856100668604 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216057F1288E856100668604 /* LoginCoordinator.swift */; };
+		21B1BC5E2890E43600E238D5 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B1BC5D2890E43600E238D5 /* Movie.swift */; };
+		21B1BC612890EBC500E238D5 /* MovieRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B1BC602890EBC500E238D5 /* MovieRepositoryProtocol.swift */; };
+		21B1BC6328910F0400E238D5 /* MovieRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B1BC6228910F0400E238D5 /* MovieRepository.swift */; };
+		21B1BC662891152A00E238D5 /* AppDependencyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B1BC652891152A00E238D5 /* AppDependencyProvider.swift */; };
+		21B1BC6A28911C4500E238D5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B1BC6828911C4500E238D5 /* NetworkManager.swift */; };
+		21B1BC6B28911C4500E238D5 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B1BC6928911C4500E238D5 /* Endpoint.swift */; };
+		21B1BC6E289127BA00E238D5 /* ListMovieModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B1BC6D289127BA00E238D5 /* ListMovieModelProtocol.swift */; };
+		21B1BC71289133A500E238D5 /* RealmLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B1BC70289133A500E238D5 /* RealmLocalDataSource.swift */; };
+		21B1BC73289133B300E238D5 /* DataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B1BC72289133B300E238D5 /* DataSourceProtocol.swift */; };
 		21B3BD2F287FBA1E00363C06 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B3BD2E287FBA1E00363C06 /* Constant.swift */; };
 		21B3BD32287FBA5B00363C06 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B3BD31287FBA5B00363C06 /* String+Extensions.swift */; };
 		21B3BD35287FBAA900363C06 /* BaseNibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B3BD34287FBAA900363C06 /* BaseNibView.swift */; };
 		21B3BD38287FBAE500363C06 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B3BD37287FBAE500363C06 /* DataManager.swift */; };
 		21B3BD3D287FC29800363C06 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B3BD3C287FC29800363C06 /* UIView+Extensions.swift */; };
-		21B3BD40287FC65500363C06 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B3BD3F287FC65500363C06 /* Endpoint.swift */; };
-		21B3BD42287FC6E000363C06 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B3BD41287FC6E000363C06 /* NetworkManager.swift */; };
 		21B3BD45287FC76100363C06 /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B3BD44287FC76100363C06 /* ConnectionManager.swift */; };
 		21B3BD47287FC8A200363C06 /* StringConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B3BD46287FC8A200363C06 /* StringConstant.swift */; };
 		21B3BD4A287FD05100363C06 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B3BD49287FD05100363C06 /* AuthenticationManager.swift */; };
@@ -58,13 +65,20 @@
 		215F5502287C287F00B6653A /* ListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListViewController.xib; sourceTree = "<group>"; };
 		216057EF288E84ED00668604 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		216057F1288E856100668604 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		21B1BC5D2890E43600E238D5 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		21B1BC602890EBC500E238D5 /* MovieRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRepositoryProtocol.swift; sourceTree = "<group>"; };
+		21B1BC6228910F0400E238D5 /* MovieRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRepository.swift; sourceTree = "<group>"; };
+		21B1BC652891152A00E238D5 /* AppDependencyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencyProvider.swift; sourceTree = "<group>"; };
+		21B1BC6828911C4500E238D5 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		21B1BC6928911C4500E238D5 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		21B1BC6D289127BA00E238D5 /* ListMovieModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMovieModelProtocol.swift; sourceTree = "<group>"; };
+		21B1BC70289133A500E238D5 /* RealmLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmLocalDataSource.swift; sourceTree = "<group>"; };
+		21B1BC72289133B300E238D5 /* DataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceProtocol.swift; sourceTree = "<group>"; };
 		21B3BD2E287FBA1E00363C06 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		21B3BD31287FBA5B00363C06 /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		21B3BD34287FBAA900363C06 /* BaseNibView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNibView.swift; sourceTree = "<group>"; };
 		21B3BD37287FBAE500363C06 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		21B3BD3C287FC29800363C06 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
-		21B3BD3F287FC65500363C06 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Endpoint.swift; path = Mooc2022/Extensions/Endpoint.swift; sourceTree = SOURCE_ROOT; };
-		21B3BD41287FC6E000363C06 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkManager.swift; path = Mooc2022/Extensions/NetworkManager.swift; sourceTree = SOURCE_ROOT; };
 		21B3BD44287FC76100363C06 /* ConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
 		21B3BD46287FC8A200363C06 /* StringConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstant.swift; sourceTree = "<group>"; };
 		21B3BD49287FD05100363C06 /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
@@ -117,6 +131,8 @@
 		215F54E4287C1CD200B6653A /* Mooc2022 */ = {
 			isa = PBXGroup;
 			children = (
+				21B1BC6F28912B2A00E238D5 /* DataSource */,
+				21B1BC642891150200E238D5 /* DI */,
 				216057EE288E7F3F00668604 /* Coordinators */,
 				218B0678287FB84400EB4430 /* Feature */,
 				218B067E287FB8EB00EB4430 /* Utils */,
@@ -157,9 +173,11 @@
 		218B0679287FB84C00EB4430 /* ListMovie */ = {
 			isa = PBXGroup;
 			children = (
+				21B1BC6C2891279200E238D5 /* ViewModel */,
+				21B1BC5F2890EB8A00E238D5 /* Repository */,
+				21B1BC5C2890E40E00E238D5 /* Entities */,
 				218B067B287FB87300EB4430 /* View */,
 				218B067A287FB86800EB4430 /* Model */,
-				21B3BD5A28808B2400363C06 /* ListMovieViewModel.swift */,
 				215F5501287C287F00B6653A /* ListViewController.swift */,
 				215F5502287C287F00B6653A /* ListViewController.xib */,
 			);
@@ -170,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				21B3BD5828808AEC00363C06 /* ListMovieModel.swift */,
+				21B1BC6D289127BA00E238D5 /* ListMovieModelProtocol.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -210,6 +229,57 @@
 			name = Utils;
 			sourceTree = "<group>";
 		};
+		21B1BC5C2890E40E00E238D5 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				21B1BC5D2890E43600E238D5 /* Movie.swift */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
+		21B1BC5F2890EB8A00E238D5 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				21B1BC602890EBC500E238D5 /* MovieRepositoryProtocol.swift */,
+				21B1BC6228910F0400E238D5 /* MovieRepository.swift */,
+			);
+			name = Repository;
+			sourceTree = "<group>";
+		};
+		21B1BC642891150200E238D5 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				21B1BC652891152A00E238D5 /* AppDependencyProvider.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		21B1BC6728911C4500E238D5 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				21B1BC6828911C4500E238D5 /* NetworkManager.swift */,
+				21B1BC6928911C4500E238D5 /* Endpoint.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		21B1BC6C2891279200E238D5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				21B3BD5A28808B2400363C06 /* ListMovieViewModel.swift */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		21B1BC6F28912B2A00E238D5 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				21B1BC70289133A500E238D5 /* RealmLocalDataSource.swift */,
+				21B1BC72289133B300E238D5 /* DataSourceProtocol.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
 		21B3BD30287FBA5B00363C06 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -234,19 +304,10 @@
 				21B3BD5528801D7400363C06 /* ListMovie */,
 				21B3BD48287FD02D00363C06 /* Authentication */,
 				21B3BD43287FC74F00363C06 /* Connection */,
-				21B3BD39287FBB2B00363C06 /* Network */,
+				21B1BC6728911C4500E238D5 /* Network */,
 				21B3BD37287FBAE500363C06 /* DataManager.swift */,
 			);
 			path = Manager;
-			sourceTree = "<group>";
-		};
-		21B3BD39287FBB2B00363C06 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				21B3BD3F287FC65500363C06 /* Endpoint.swift */,
-				21B3BD41287FC6E000363C06 /* NetworkManager.swift */,
-			);
-			path = Network;
 			sourceTree = "<group>";
 		};
 		21B3BD43287FC74F00363C06 /* Connection */ = {
@@ -429,10 +490,12 @@
 				21B3BD47287FC8A200363C06 /* StringConstant.swift in Sources */,
 				E856AC15287D45A10069C3B4 /* MovieCell.swift in Sources */,
 				215F54FD287C1EA700B6653A /* HomeViewController.swift in Sources */,
+				21B1BC612890EBC500E238D5 /* MovieRepositoryProtocol.swift in Sources */,
 				215F54FA287C1E6700B6653A /* BaseViewController.swift in Sources */,
+				21B1BC6E289127BA00E238D5 /* ListMovieModelProtocol.swift in Sources */,
 				216057F2288E856100668604 /* LoginCoordinator.swift in Sources */,
 				21B3BD51287FF94500363C06 /* LoginViewController.swift in Sources */,
-				21B3BD40287FC65500363C06 /* Endpoint.swift in Sources */,
+				21B1BC6328910F0400E238D5 /* MovieRepository.swift in Sources */,
 				21B3BD2F287FBA1E00363C06 /* Constant.swift in Sources */,
 				21B3BD32287FBA5B00363C06 /* String+Extensions.swift in Sources */,
 				21B3BD54287FF99000363C06 /* LoginViewModel.swift in Sources */,
@@ -441,17 +504,22 @@
 				21B3BD3D287FC29800363C06 /* UIView+Extensions.swift in Sources */,
 				215F54E6287C1CD200B6653A /* AppDelegate.swift in Sources */,
 				21B3BD35287FBAA900363C06 /* BaseNibView.swift in Sources */,
+				21B1BC662891152A00E238D5 /* AppDependencyProvider.swift in Sources */,
 				21B3BD45287FC76100363C06 /* ConnectionManager.swift in Sources */,
-				21B3BD42287FC6E000363C06 /* NetworkManager.swift in Sources */,
+				21B1BC6A28911C4500E238D5 /* NetworkManager.swift in Sources */,
 				21B3BD38287FBAE500363C06 /* DataManager.swift in Sources */,
 				215F54E8287C1CD200B6653A /* SceneDelegate.swift in Sources */,
 				215F5500287C281B00B6653A /* MainViewController.swift in Sources */,
 				21B3BD5928808AEC00363C06 /* ListMovieModel.swift in Sources */,
+				21B1BC71289133A500E238D5 /* RealmLocalDataSource.swift in Sources */,
 				21B3BD5B28808B2400363C06 /* ListMovieViewModel.swift in Sources */,
+				21B1BC73289133B300E238D5 /* DataSourceProtocol.swift in Sources */,
 				21B3BD4A287FD05100363C06 /* AuthenticationManager.swift in Sources */,
 				21B3BD5728801D8D00363C06 /* ListMovieManager.swift in Sources */,
 				216057F0288E84ED00668604 /* Coordinator.swift in Sources */,
+				21B1BC5E2890E43600E238D5 /* Movie.swift in Sources */,
 				21B3BD5D2880980F00363C06 /* CustomCollectionViewLayout.swift in Sources */,
+				21B1BC6B28911C4500E238D5 /* Endpoint.swift in Sources */,
 				21B3BD4D287FD0D100363C06 /* Authentication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

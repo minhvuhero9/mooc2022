@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 
 extension NetworkManager {
-    public func getListMovie(completion: ((Swift.Result<ListMovieModel, NetworkError>) -> Void)? = nil) {
+    public func getListMovie(completion: ((Swift.Result<ListMovie, NetworkError>) -> Void)? = nil) {
         let authorization = StringConstants.accessToken
         let headers: HTTPHeaders = [.authorization(bearerToken: authorization)]
         self.makeGetRequest(url: self.baseURL + Endpoint.listMovie,

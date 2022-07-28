@@ -18,9 +18,9 @@ class LoginCoordinator: Coordinator {
     
     func start() {
         navigationController.setNavigationBarHidden(true, animated: true)
-        let vc = LoginViewController()
-        vc.coordinator = self
-        navigationController.pushViewController(vc, animated: true)
+        let controller = AppDependencyProvider.loginViewController
+        controller.coordinator = self
+        navigationController.pushViewController(controller, animated: true)
     }
     
     func loginSuccess() {

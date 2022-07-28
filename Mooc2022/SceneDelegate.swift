@@ -18,9 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let winScene = (scene as? UIWindowScene) else { return }
         let navController = UINavigationController()
-        navController.navigationBar.barTintColor = .blue
-        coordinator?.navigationController = navController
-        coordinator =  LoginCoordinator(navigationController: navController)
+        coordinator = LoginCoordinator(navigationController: navController)
         coordinator?.start()
         
         window = UIWindow(windowScene: winScene)

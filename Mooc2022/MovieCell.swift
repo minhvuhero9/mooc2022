@@ -38,14 +38,8 @@ extension MovieCell {
         containerView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner] // Top right corner, Top left corner respectively
     }
     
-    func configureCell(model: MovieModel) {
-        guard let image = model.posterPath else {
-            return
-        }
-        guard let title = model.title else {
-            return
-        }
-        imageView.kf.setImage(with: DataManager.getImageURL(image))
-        titleLabel.text = title
+    func configureCell(movie: Movie) {
+        imageView.kf.setImage(with: DataManager.getImageURL(movie.posterPath))
+        titleLabel.text = movie.title
     }
 }

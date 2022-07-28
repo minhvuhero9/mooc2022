@@ -8,25 +8,20 @@
 import UIKit
 
 class ListMovieViewModel: NSObject {
-    // MARK: - Properties
-    var listMovies = [MovieModel]()
-    var getListMoviesSuccess: () -> Void = { }
-    var getListMoviesFailure: (String) -> Void = { _ in }
-
-}
-
-extension ListMovieViewModel {
-    func getListMovies() {
-        NetworkManager.shared.getListMovie { [weak self] result in
-            switch result {
-            case.success(let data):
-                if let listMovies = data.results {
-                    self?.listMovies = listMovies
-                    self?.getListMoviesSuccess()
-                }
-            case.failure(let error):
-                self?.getListMoviesFailure(error.localizedDescription)
-            }
-        }
+    var model: ListMovieModelProtocol?
+    var movies: [Movie] = []
+    
+    func getAllMovies() {
+        model?.fetchAllMovies()
+        movies = model?.movies ?? []
     }
+    
+    func fetchMoviesSever() {
+        model?.fetchMovieFromSever()
+    }
+    
+    func logURL() {
+        model?.logURL()
+    }
+    
 }

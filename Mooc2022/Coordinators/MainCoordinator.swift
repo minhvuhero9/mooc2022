@@ -18,8 +18,8 @@ class MainCoodinator: Coordinator {
     }
 
     func start() {
-        let vc = MainViewController()
-        navigationController.pushViewController(vc, animated: true)
+        let controller = AppDependencyProvider.mainTabbarController
+        navigationController.pushViewController(controller, animated: true)
     }
     
 }

@@ -19,18 +19,16 @@ class ListViewController: BaseViewController {
     private let cellSpacing: CGFloat = 8
     private let heightTitle: CGFloat = 73
     
-    let viewModel = ListMovieViewModel()
+    var viewModel = ListMovieViewModel()
     
     // MARK: View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configureView()
-        viewModel.getListMovies()
-        viewModel.getListMoviesSuccess = {
-            print("success")
-            print("\(self.viewModel.listMovies)")
-            self.collectionView.reloadData()
-        }
+        viewModel.fetchMoviesSever()
+        viewModel.getAllMovies()
+        viewModel.logURL()
+        self.collectionView.reloadData()
     }
 }
 
@@ -79,12 +77,12 @@ private extension ListViewController {
 // MARK: CollectionView DataSource
 extension ListViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.viewModel.listMovies.count
+        return self.viewModel.movies.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MovieCell.identifier, for: indexPath) as! MovieCell
-        cell.configureCell(model: self.viewModel.listMovies[indexPath.row])
+        cell.configureCell(movie: self.viewModel.movies[indexPath.row])
         return cell
     }
 }
