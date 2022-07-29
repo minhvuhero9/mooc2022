@@ -8,7 +8,7 @@
 import UIKit
 
 class LoginViewController: BaseViewController {
-
+    
     weak var coordinator: LoginCoordinator?
 
     override func viewDidLoad() {
