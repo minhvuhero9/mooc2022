@@ -81,25 +81,25 @@ class FirebaseManager {
         })
     }
     
-    func insertFavorite(movies: [MovieModel]) {
-        guard let userID = LoginService.shared.currentUser?.uid else {
-            return
-        }
-        let path = "Favorites/\(userID)"
-        movies.forEach({ movie in
-            guard movie.id != nil else {
-                return
-            }
-            ref.child(path).child((String(describing: movie.id!))).setValue(true) {
-              (error:Error?, ref:DatabaseReference) in
-              if let error = error {
-                print("Data could not be saved: \(error).")
-              } else {
-                print("Data saved successfully!")
-              }
-            }
-        })
-    }
+//    func insertFavorite(movies: [MovieModel]) {
+//        guard let userID = LoginService.shared.currentUser?.uid else {
+//            return
+//        }
+//        let path = "Favorites/\(userID)"
+//        movies.forEach({ movie in
+//            guard movie.id != nil else {
+//                return
+//            }
+//            ref.child(path).child((String(describing: movie.id!))).setValue(true) {
+//              (error:Error?, ref:DatabaseReference) in
+//              if let error = error {
+//                print("Data could not be saved: \(error).")
+//              } else {
+//                print("Data saved successfully!")
+//              }
+//            }
+//        })
+//    }
     
     private func updateUser(user: UserProfile, isNewUser: Bool) -> Bool {
         if let currentUser = LoginService.shared.currentUser, currentUser.uid == user.userId {

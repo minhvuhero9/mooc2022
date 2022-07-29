@@ -24,16 +24,11 @@ class LoginViewController: BaseViewController {
         loginWithGoogleAction()
     }
     
-    func goToHomeController() {
-        let main = MainViewController()
-        navigationController?.pushViewController(main, animated: false)
-    }
-    
     func checkAccountLoggedIn() {
         let currentUser = LoginService.shared.currentUser
         Log.debug.out("Provider uid current: \(currentUser?.uid ?? "")")
         if currentUser != nil {
-            goToHomeController()
+            self.coordinator?.loginSuccess()
         }
     }
     // MARK: Google login method
@@ -42,7 +37,7 @@ class LoginViewController: BaseViewController {
             vc: self,
             onSuccess: { [weak self] in
                 UserDefaults.standard.set(LoginService.LoginType.google.rawValue, forKey: "loginType")
-                self?.goToHomeController()
+                self?.coordinator?.loginSuccess()
             },
             onFailed: { [weak self] error in
                 self?.showMessagePrompt(error?.localizedDescription ?? "Unknown")
@@ -56,7 +51,7 @@ class LoginViewController: BaseViewController {
             vc: self,
             onSuccess: { [weak self] in
                 UserDefaults.standard.set(LoginService.LoginType.facebook.rawValue, forKey: "loginType")
-                self?.goToHomeController()
+                self?.coordinator?.loginSuccess()
             },
             onFailed: { [weak self] error in
                 self?.showMessagePrompt(error?.localizedDescription ?? "Unknown")
