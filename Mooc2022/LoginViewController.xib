@@ -2,9 +2,9 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -18,27 +18,66 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BKK-BW-E2M">
-                    <rect key="frame" x="177.5" y="432.5" width="59.5" height="31"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Login"/>
-                    <connections>
-                        <action selector="loginPressed:" destination="-1" eventType="touchUpInside" id="1Ge-bh-wST"/>
-                    </connections>
-                </button>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="zPV-dE-uuG">
+                    <rect key="frame" x="50" y="646" width="314" height="116"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BKK-BW-E2M">
+                            <rect key="frame" x="0.0" y="0.0" width="314" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="w5i-Vq-P0V"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="facebook" imagePlacement="leading" title="Login with Facebook" imagePadding="8" titleAlignment="center">
+                                <backgroundConfiguration key="background">
+                                    <color key="backgroundColor" red="0.011764705882352941" green="0.60784313725490191" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </backgroundConfiguration>
+                                <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="pressedLoginWithFacebook:" destination="-1" eventType="touchUpInside" id="tLI-f1-Sdc"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tmC-eF-jtZ">
+                            <rect key="frame" x="0.0" y="66" width="314" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="cLP-tF-rIg"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="google" imagePlacement="leading" title="Login with Google" imagePadding="8" titleAlignment="center">
+                                <backgroundConfiguration key="background">
+                                    <color key="backgroundColor" red="0.81176470588235294" green="0.2627450980392157" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </backgroundConfiguration>
+                                <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="pressedLoginWithGoogle:" destination="-1" eventType="touchUpInside" id="Mja-OH-jKj"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </stackView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mooc" translatesAutoresizingMaskIntoConstraints="NO" id="diy-6F-ShA">
+                    <rect key="frame" x="50" y="94" width="314" height="502"/>
+                </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="BKK-BW-E2M" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="7S1-kx-F5U"/>
-                <constraint firstItem="BKK-BW-E2M" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="QWQ-TX-0v6"/>
+                <constraint firstItem="diy-6F-ShA" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="718-NR-3NY"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="diy-6F-ShA" secondAttribute="trailing" constant="50" id="925-SR-DmO"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zPV-dE-uuG" secondAttribute="trailing" constant="50" id="A9d-zz-CpR"/>
+                <constraint firstItem="zPV-dE-uuG" firstAttribute="top" relation="greaterThanOrEqual" secondItem="diy-6F-ShA" secondAttribute="bottom" constant="50" id="D9s-7p-3VZ"/>
+                <constraint firstItem="diy-6F-ShA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="NJm-d2-Yep"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="zPV-dE-uuG" secondAttribute="bottom" constant="100" id="aDh-t7-USA"/>
+                <constraint firstItem="zPV-dE-uuG" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="h8l-vh-wve"/>
+                <constraint firstItem="zPV-dE-uuG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="v4v-A5-IqQ"/>
             </constraints>
             <point key="canvasLocation" x="139" y="51"/>
         </view>
     </objects>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="facebook" width="48" height="48"/>
+        <image name="google" width="48" height="48"/>
+        <image name="mooc" width="2560" height="868"/>
     </resources>
 </document>
