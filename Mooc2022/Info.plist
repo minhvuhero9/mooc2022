@@ -2,6 +2,27 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.541357829204-s8gle609vv4p9o0k5oa37r37pf18m9ae</string>
+				<string>fb465769418231911</string>
+			</array>
+		</dict>
+	</array>
+	<key>FacebookAppID</key>
+	<string>465769418231911</string>
+	<key>FacebookClientToken</key>
+	<string>ffbe3dfb603a013f409dc3402376c87f</string>
+	<key>FacebookDisplayName</key>
+	<string>Mooc2022-Movie</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbapi</string>
+		<string>fb-messenger-share-api</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
