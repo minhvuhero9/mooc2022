@@ -19,6 +19,10 @@ class ListViewController: BaseViewController {
     private let cellSpacing: CGFloat = 8
     private let heightTitle: CGFloat = 73
     
+    /// Helper Animation
+    var lastContentOffset: CGFloat = 0
+    var yCellTransform: CGFloat = 0
+    
     var viewModel = ListMovieViewModel()
     
     // MARK: View Life Cycle
@@ -107,5 +111,56 @@ extension ListViewController: UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return cellSpacing
+    }
+    
+    // MARK: Animation cell
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        
+        /// 3DMakeScale Animation
+        cell.layer.transform = CATransform3DMakeScale(0.1, 0.1, 1.0)
+        UIView.animate(withDuration: 1.5, delay: 0.05 * Double(indexPath.row), animations: {
+            cell.layer.transform = CATransform3DMakeScale(1.0, 1.0, 1.0)
+        }, completion: nil)
+        
+        /// Affine Animation
+        cell.transform = CGAffineTransform(translationX: 0, y: yCellTransform)
+        UIView.animate(
+            withDuration: 1,
+            delay: 0.1 * Double(indexPath.row),
+            options: [.curveEaseInOut],
+            animations: {
+                cell.transform = CGAffineTransform(translationX: 0, y: 0)
+                
+            })
+        
+        /// Fade Animation
+        cell.alpha = 0
+        UIView.animate(withDuration: 1.5, delay: 0.1 * Double(indexPath.row), animations: {
+            cell.alpha = 1
+        })
+    }
+}
+
+// MARK: UIScrollViewDelegate
+extension ListViewController: UIScrollViewDelegate {
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        lastContentOffset = scrollView.contentOffset.y
+    }
+
+    /// while scrolling this delegate is being called so you may now check which direction your scrollView is being scrolled to
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if self.lastContentOffset < scrollView.contentOffset.y {
+            /// did move up
+            yCellTransform = UIScreen.main.bounds.height / 2
+        } else if self.lastContentOffset > scrollView.contentOffset.y {
+            /// did move down
+            if lastContentOffset == 0 {
+                yCellTransform = UIScreen.main.bounds.height / 2
+            } else {
+                yCellTransform = -UIScreen.main.bounds.height / 2
+            }
+        } else {
+            /// didn't move
+        }
     }
 }
