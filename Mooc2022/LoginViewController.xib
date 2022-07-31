@@ -4,12 +4,16 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="Mooc2022" customModuleProvider="target">
             <connections>
+                <outlet property="loginAnimation" destination="pIm-K9-BrG" id="WSt-u1-UlV"/>
+                <outlet property="rowView" destination="pUy-mS-SF5" id="JER-cs-tXf"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,7 +23,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="zPV-dE-uuG">
-                    <rect key="frame" x="50" y="646" width="314" height="116"/>
+                    <rect key="frame" x="50" y="244" width="314" height="116"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BKK-BW-E2M">
                             <rect key="frame" x="0.0" y="0.0" width="314" height="50"/>
@@ -57,27 +61,62 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </stackView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mooc" translatesAutoresizingMaskIntoConstraints="NO" id="diy-6F-ShA">
-                    <rect key="frame" x="50" y="94" width="314" height="502"/>
+                    <rect key="frame" x="50" y="94" width="314" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="PLG-gQ-ehV"/>
+                    </constraints>
                 </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pUy-mS-SF5">
+                    <rect key="frame" x="0.0" y="842" width="414" height="20"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="HCT-NU-siv"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pIm-K9-BrG">
+                    <rect key="frame" x="50" y="376" width="314" height="50"/>
+                    <color key="backgroundColor" systemColor="systemMintColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Sut-Ts-7p8"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="   Login Animation">
+                        <imageReference key="image" image="lock" catalog="system" symbolScale="large"/>
+                    </state>
+                    <connections>
+                        <action selector="logicAnimationAction:" destination="-1" eventType="touchUpInside" id="6Hd-AE-HdB"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="pUy-mS-SF5" secondAttribute="bottom" id="1sj-n0-sl8"/>
+                <constraint firstItem="pIm-K9-BrG" firstAttribute="top" secondItem="zPV-dE-uuG" secondAttribute="bottom" constant="16" id="6xQ-RW-JP8"/>
                 <constraint firstItem="diy-6F-ShA" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="718-NR-3NY"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="diy-6F-ShA" secondAttribute="trailing" constant="50" id="925-SR-DmO"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zPV-dE-uuG" secondAttribute="trailing" constant="50" id="A9d-zz-CpR"/>
-                <constraint firstItem="zPV-dE-uuG" firstAttribute="top" relation="greaterThanOrEqual" secondItem="diy-6F-ShA" secondAttribute="bottom" constant="50" id="D9s-7p-3VZ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pUy-mS-SF5" secondAttribute="trailing" id="JHE-vL-x1o"/>
+                <constraint firstItem="pIm-K9-BrG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="NBC-Bh-o3x"/>
                 <constraint firstItem="diy-6F-ShA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="NJm-d2-Yep"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="zPV-dE-uuG" secondAttribute="bottom" constant="100" id="aDh-t7-USA"/>
+                <constraint firstItem="pIm-K9-BrG" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="dap-YK-YwH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pIm-K9-BrG" secondAttribute="trailing" constant="50" id="df0-hC-hfR"/>
                 <constraint firstItem="zPV-dE-uuG" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="h8l-vh-wve"/>
+                <constraint firstItem="pUy-mS-SF5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="m79-ax-Wfy"/>
                 <constraint firstItem="zPV-dE-uuG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="v4v-A5-IqQ"/>
+                <constraint firstItem="zPV-dE-uuG" firstAttribute="top" secondItem="diy-6F-ShA" secondAttribute="bottom" constant="50" id="zAA-oE-Xh2"/>
             </constraints>
-            <point key="canvasLocation" x="139" y="51"/>
+            <point key="canvasLocation" x="137.68115942028987" y="50.892857142857139"/>
         </view>
     </objects>
     <resources>
         <image name="facebook" width="48" height="48"/>
         <image name="google" width="48" height="48"/>
+        <image name="lock" catalog="system" width="128" height="128"/>
         <image name="mooc" width="2560" height="868"/>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

@@ -52,6 +52,7 @@
 		458ECBAE288EC76B005DB0F1 /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458ECBAD288EC76B005DB0F1 /* LogViewController.swift */; };
 		45ACB7EE288FAB9F002546DE /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ACB7ED288FAB9F002546DE /* LoginService.swift */; };
 		45F51BE828855D7500E84673 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 45F51BE728855D7500E84673 /* GoogleService-Info.plist */; };
+		E8353C3128966211007042F4 /* CircularTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8353C3028966211007042F4 /* CircularTransition.swift */; };
 		E856AC15287D45A10069C3B4 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E856AC13287D45A10069C3B4 /* MovieCell.swift */; };
 		E856AC16287D45A10069C3B4 /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E856AC14287D45A10069C3B4 /* MovieCell.xib */; };
 /* End PBXBuildFile section */
@@ -106,6 +107,7 @@
 		45ACB7ED288FAB9F002546DE /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		45F51BE728855D7500E84673 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CEF0F97197EE4981FBB83B77 /* Pods_Mooc2022.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mooc2022.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8353C3028966211007042F4 /* CircularTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularTransition.swift; sourceTree = "<group>"; };
 		E856AC13287D45A10069C3B4 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		E856AC14287D45A10069C3B4 /* MovieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -308,6 +310,7 @@
 			children = (
 				21B3BD34287FBAA900363C06 /* BaseNibView.swift */,
 				21B3BD5C2880980F00363C06 /* CustomCollectionViewLayout.swift */,
+				E8353C3028966211007042F4 /* CircularTransition.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -516,12 +519,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				21B3BD47287FC8A200363C06 /* StringConstant.swift in Sources */,
+				E8353C3128966211007042F4 /* CircularTransition.swift in Sources */,
 				E856AC15287D45A10069C3B4 /* MovieCell.swift in Sources */,
 				215F54FD287C1EA700B6653A /* HomeViewController.swift in Sources */,
 				21B1BC612890EBC500E238D5 /* MovieRepositoryProtocol.swift in Sources */,
 				4504DE53288F02F000D318A0 /* FirebaseManager.swift in Sources */,
 				458ECBAE288EC76B005DB0F1 /* LogViewController.swift in Sources */,
- 				215F54FA287C1E6700B6653A /* BaseViewController.swift in Sources */,
+				215F54FA287C1E6700B6653A /* BaseViewController.swift in Sources */,
 				21B1BC6E289127BA00E238D5 /* ListMovieModelProtocol.swift in Sources */,
 				216057F2288E856100668604 /* LoginCoordinator.swift in Sources */,
 				21B3BD51287FF94500363C06 /* LoginViewController.swift in Sources */,
