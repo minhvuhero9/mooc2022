@@ -10,8 +10,10 @@ import UIKit
 
 class MainCoodinator: Coordinator {
     var childCoordinators = [Coordinator]()
-
+ 
     var navigationController: UINavigationController
+    
+    weak var parentCoordinator: LoginCoordinator?
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -19,7 +21,17 @@ class MainCoodinator: Coordinator {
 
     func start() {
         let controller = AppDependencyProvider.mainTabbarController
+        controller.coordinator = self
         navigationController.pushViewController(controller, animated: true)
+
+    }
+    
+    func logOut() {
+        parentCoordinator?.logOut()
+    }
+    
+    func didFinish() {
+        parentCoordinator?.childDidFinish(self)
     }
     
 }

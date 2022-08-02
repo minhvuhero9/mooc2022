@@ -24,8 +24,24 @@ class LoginCoordinator: Coordinator {
     }
     
     func loginSuccess() {
-        let coordinator = MainCoodinator(navigationController: navigationController)
-        coordinator.start()
+        let child = MainCoodinator(navigationController: navigationController)
+        child.parentCoordinator = self
+        childCoordinators.append(child)
+        child.start()
     }
-
+    
+    func logOut() {
+        LoginService.shared.signOut()
+        navigationController.popViewController(animated: true)
+    }
+    
+    func childDidFinish(_ child: Coordinator?) {
+        for (index, coordinator) in childCoordinators.enumerated() {
+            if coordinator === child {
+                childCoordinators.remove(at: index)
+                break
+            }
+        }
+    }
+    
 }

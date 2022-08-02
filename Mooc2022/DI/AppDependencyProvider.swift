@@ -9,7 +9,6 @@ import RealmSwift
 struct AppDependencyProvider {
     static var listMovies = ListMovie()
     static var realm = try! Realm()
-
     static var dataSource: DataSourceProtocol {
         return RealmLocalDataSource(realm: realm)
     }
@@ -22,8 +21,13 @@ struct AppDependencyProvider {
         return ListMovieModel(movies: self.listMovies.results, repo: self.repo)
     }
     
-    static var mainTabbarController: MainViewController {
-        let vc = MainViewController()
+    static var loginViewController: LoginViewController {
+        let vc = LoginViewController()
+        return vc
+    }
+    
+    static var mainTabbarController: MainTabbarViewController {
+        let vc = MainTabbarViewController()
          return vc
     }
     
@@ -38,9 +42,9 @@ struct AppDependencyProvider {
         return vc
     }
     
-    static var loginViewController: LoginViewController {
-        let vc = LoginViewController()
-        //vc.todoViewModel = self.todoViewModel
+    static var userViewController: UserViewController {
+        let vc = UserViewController()
         return vc
     }
+    
 }

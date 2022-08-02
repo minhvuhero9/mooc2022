@@ -47,10 +47,12 @@ class LoginViewController: BaseViewController {
             addBehaviorAnimationForLoginAnimation()
             isShowAnimation = true
         } else {
-            let mainViewController = MainViewController()
+            let mainViewController = MainTabbarViewController()
             mainViewController.transitioningDelegate = self
             mainViewController.modalPresentationStyle = .custom
             present(mainViewController, animated: true)
+            self.coordinator?.loginSuccess()
+
         }
     }
     

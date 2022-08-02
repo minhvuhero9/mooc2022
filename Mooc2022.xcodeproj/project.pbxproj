@@ -14,7 +14,7 @@
 		215F54FA287C1E6700B6653A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215F54F9287C1E6700B6653A /* BaseViewController.swift */; };
 		215F54FD287C1EA700B6653A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215F54FB287C1EA700B6653A /* HomeViewController.swift */; };
 		215F54FE287C1EA700B6653A /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 215F54FC287C1EA700B6653A /* HomeViewController.xib */; };
-		215F5500287C281B00B6653A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215F54FF287C281B00B6653A /* MainViewController.swift */; };
+		215F5500287C281B00B6653A /* MainTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215F54FF287C281B00B6653A /* MainTabbarViewController.swift */; };
 		215F5503287C287F00B6653A /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215F5501287C287F00B6653A /* ListViewController.swift */; };
 		215F5504287C287F00B6653A /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 215F5502287C287F00B6653A /* ListViewController.xib */; };
 		216057F0288E84ED00668604 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216057EF288E84ED00668604 /* Coordinator.swift */; };
@@ -45,6 +45,11 @@
 		21B3BD5B28808B2400363C06 /* ListMovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B3BD5A28808B2400363C06 /* ListMovieViewModel.swift */; };
 		21B3BD5D2880980F00363C06 /* CustomCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B3BD5C2880980F00363C06 /* CustomCollectionViewLayout.swift */; };
 		21B4562A288F8D70006B42D5 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B45629288F8D70006B42D5 /* MainCoordinator.swift */; };
+		21EB3A602898BF7C0056D9EB /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EB3A5E2898BF7C0056D9EB /* UserViewController.swift */; };
+		21EB3A612898BF7C0056D9EB /* UserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21EB3A5F2898BF7C0056D9EB /* UserViewController.xib */; };
+		21EB3A63289902820056D9EB /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EB3A62289902810056D9EB /* HomeCoordinator.swift */; };
+		21EB3A65289913880056D9EB /* ListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EB3A64289913880056D9EB /* ListCoordinator.swift */; };
+		21EB3A672899171A0056D9EB /* UserCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EB3A662899171A0056D9EB /* UserCoordinator.swift */; };
 		29788D778E9E8374DA334D18 /* Pods_Mooc2022.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF0F97197EE4981FBB83B77 /* Pods_Mooc2022.framework */; };
 		4504DE53288F02F000D318A0 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4504DE52288F02F000D318A0 /* FirebaseManager.swift */; };
 		45340F66288FB9A70050425A /* LogViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45340F65288FB9A70050425A /* LogViewController.storyboard */; };
@@ -67,7 +72,7 @@
 		215F54F9287C1E6700B6653A /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		215F54FB287C1EA700B6653A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		215F54FC287C1EA700B6653A /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
-		215F54FF287C281B00B6653A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		215F54FF287C281B00B6653A /* MainTabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbarViewController.swift; sourceTree = "<group>"; };
 		215F5501287C287F00B6653A /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		215F5502287C287F00B6653A /* ListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListViewController.xib; sourceTree = "<group>"; };
 		216057EF288E84ED00668604 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -98,6 +103,11 @@
 		21B3BD5A28808B2400363C06 /* ListMovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMovieViewModel.swift; sourceTree = "<group>"; };
 		21B3BD5C2880980F00363C06 /* CustomCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewLayout.swift; sourceTree = "<group>"; };
 		21B45629288F8D70006B42D5 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		21EB3A5E2898BF7C0056D9EB /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		21EB3A5F2898BF7C0056D9EB /* UserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserViewController.xib; sourceTree = "<group>"; };
+		21EB3A62289902810056D9EB /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		21EB3A64289913880056D9EB /* ListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCoordinator.swift; sourceTree = "<group>"; };
+		21EB3A662899171A0056D9EB /* UserCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCoordinator.swift; sourceTree = "<group>"; };
 		35F6A1968FEE67553E06B453 /* Pods-Mooc2022.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mooc2022.debug.xcconfig"; path = "Target Support Files/Pods-Mooc2022/Pods-Mooc2022.debug.xcconfig"; sourceTree = "<group>"; };
 		4504DE52288F02F000D318A0 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		45340F65288FB9A70050425A /* LogViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LogViewController.storyboard; sourceTree = "<group>"; };
@@ -169,6 +179,9 @@
 				216057EF288E84ED00668604 /* Coordinator.swift */,
 				216057F1288E856100668604 /* LoginCoordinator.swift */,
 				21B45629288F8D70006B42D5 /* MainCoordinator.swift */,
+				21EB3A62289902810056D9EB /* HomeCoordinator.swift */,
+				21EB3A64289913880056D9EB /* ListCoordinator.swift */,
+				21EB3A662899171A0056D9EB /* UserCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -176,6 +189,7 @@
 		218B0678287FB84400EB4430 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				21EB3A5D2898BF580056D9EB /* User */,
 				21B3BD4E287FF92700363C06 /* Login */,
 				21B3BD4B287FD0C400363C06 /* Authentication */,
 				218B067D287FB8A700EB4430 /* Home */,
@@ -220,7 +234,7 @@
 		218B067C287FB89500EB4430 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				215F54FF287C281B00B6653A /* MainViewController.swift */,
+				215F54FF287C281B00B6653A /* MainTabbarViewController.swift */,
 				215F54F9287C1E6700B6653A /* BaseViewController.swift */,
 			);
 			name = Base;
@@ -371,6 +385,15 @@
 			path = ListMovie;
 			sourceTree = "<group>";
 		};
+		21EB3A5D2898BF580056D9EB /* User */ = {
+			isa = PBXGroup;
+			children = (
+				21EB3A5E2898BF7C0056D9EB /* UserViewController.swift */,
+				21EB3A5F2898BF7C0056D9EB /* UserViewController.xib */,
+			);
+			name = User;
+			sourceTree = "<group>";
+		};
 		2BAA36429EDF83C6058577D5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -459,6 +482,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				215F54F2287C1CD400B6653A /* LaunchScreen.storyboard in Resources */,
+				21EB3A612898BF7C0056D9EB /* UserViewController.xib in Resources */,
 				215F54EF287C1CD400B6653A /* Assets.xcassets in Resources */,
 				21B3BD52287FF94500363C06 /* LoginViewController.xib in Resources */,
 				215F5504287C287F00B6653A /* ListViewController.xib in Resources */,
@@ -519,6 +543,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				21B3BD47287FC8A200363C06 /* StringConstant.swift in Sources */,
+				21EB3A672899171A0056D9EB /* UserCoordinator.swift in Sources */,
+				21EB3A602898BF7C0056D9EB /* UserViewController.swift in Sources */,
 				E8353C3128966211007042F4 /* CircularTransition.swift in Sources */,
 				E856AC15287D45A10069C3B4 /* MovieCell.swift in Sources */,
 				215F54FD287C1EA700B6653A /* HomeViewController.swift in Sources */,
@@ -533,6 +559,7 @@
 				21B3BD2F287FBA1E00363C06 /* Constant.swift in Sources */,
 				458ECBAC288EC37A005DB0F1 /* Log.swift in Sources */,
 				21B3BD32287FBA5B00363C06 /* String+Extensions.swift in Sources */,
+				21EB3A63289902820056D9EB /* HomeCoordinator.swift in Sources */,
 				21B3BD54287FF99000363C06 /* LoginViewModel.swift in Sources */,
 				215F5503287C287F00B6653A /* ListViewController.swift in Sources */,
 				21B4562A288F8D70006B42D5 /* MainCoordinator.swift in Sources */,
@@ -544,7 +571,7 @@
 				21B1BC6A28911C4500E238D5 /* NetworkManager.swift in Sources */,
 				21B3BD38287FBAE500363C06 /* DataManager.swift in Sources */,
 				215F54E8287C1CD200B6653A /* SceneDelegate.swift in Sources */,
-				215F5500287C281B00B6653A /* MainViewController.swift in Sources */,
+				215F5500287C281B00B6653A /* MainTabbarViewController.swift in Sources */,
 				21B3BD5928808AEC00363C06 /* ListMovieModel.swift in Sources */,
 				21B1BC71289133A500E238D5 /* RealmLocalDataSource.swift in Sources */,
 				21B3BD5B28808B2400363C06 /* ListMovieViewModel.swift in Sources */,
@@ -554,6 +581,7 @@
 				216057F0288E84ED00668604 /* Coordinator.swift in Sources */,
 				21B1BC5E2890E43600E238D5 /* Movie.swift in Sources */,
 				21B3BD5D2880980F00363C06 /* CustomCollectionViewLayout.swift in Sources */,
+				21EB3A65289913880056D9EB /* ListCoordinator.swift in Sources */,
 				21B1BC6B28911C4500E238D5 /* Endpoint.swift in Sources */,
 				21B3BD4D287FD0D100363C06 /* Authentication.swift in Sources */,
 				45ACB7EE288FAB9F002546DE /* LoginService.swift in Sources */,
