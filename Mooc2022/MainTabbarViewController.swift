@@ -12,6 +12,7 @@ class MainTabbarViewController: UITabBarController {
     let homeCoordinator = HomeCoordinator(navigationController: UINavigationController())
     let listCoordinator = ListCoordinator(navigationController: UINavigationController())
     let userCoordinator = UserCoordinator(navigationController: UINavigationController())
+    let favoriteCoordinator = FavoriteCoordinator(navigationController: UINavigationController())
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,9 +24,12 @@ class MainTabbarViewController: UITabBarController {
         userCoordinator.parrentCoordinator = coordinator
         homeCoordinator.start()
         listCoordinator.start()
+        favoriteCoordinator.start()
         userCoordinator.start()
-
-        self.viewControllers = [homeCoordinator.navigationController, listCoordinator.navigationController, userCoordinator.navigationController]
+        
+        self.viewControllers = [homeCoordinator.navigationController, listCoordinator.navigationController,
+            favoriteCoordinator.navigationController,
+            userCoordinator.navigationController]
     }
     
     override func viewDidDisappear(_ animated: Bool) {
