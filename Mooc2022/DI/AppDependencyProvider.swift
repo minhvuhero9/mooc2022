@@ -47,4 +47,9 @@ struct AppDependencyProvider {
         return vc
     }
     
+    static var favoriteViewController: FavoriteViewController {
+        let vc = FavoriteViewController()
+        return vc
+    }
+    
 }

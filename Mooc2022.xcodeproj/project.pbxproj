@@ -50,6 +50,9 @@
 		21EB3A63289902820056D9EB /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EB3A62289902810056D9EB /* HomeCoordinator.swift */; };
 		21EB3A65289913880056D9EB /* ListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EB3A64289913880056D9EB /* ListCoordinator.swift */; };
 		21EB3A672899171A0056D9EB /* UserCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EB3A662899171A0056D9EB /* UserCoordinator.swift */; };
+		21EB3A6B28993AD60056D9EB /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EB3A6928993AD60056D9EB /* FavoriteViewController.swift */; };
+		21EB3A6C28993AD60056D9EB /* FavoriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21EB3A6A28993AD60056D9EB /* FavoriteViewController.xib */; };
+		21EB3A6E28993B340056D9EB /* FavoriteCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EB3A6D28993B330056D9EB /* FavoriteCoordinator.swift */; };
 		29788D778E9E8374DA334D18 /* Pods_Mooc2022.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF0F97197EE4981FBB83B77 /* Pods_Mooc2022.framework */; };
 		4504DE53288F02F000D318A0 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4504DE52288F02F000D318A0 /* FirebaseManager.swift */; };
 		45340F66288FB9A70050425A /* LogViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45340F65288FB9A70050425A /* LogViewController.storyboard */; };
@@ -108,6 +111,9 @@
 		21EB3A62289902810056D9EB /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		21EB3A64289913880056D9EB /* ListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCoordinator.swift; sourceTree = "<group>"; };
 		21EB3A662899171A0056D9EB /* UserCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCoordinator.swift; sourceTree = "<group>"; };
+		21EB3A6928993AD60056D9EB /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		21EB3A6A28993AD60056D9EB /* FavoriteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteViewController.xib; sourceTree = "<group>"; };
+		21EB3A6D28993B330056D9EB /* FavoriteCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCoordinator.swift; sourceTree = "<group>"; };
 		35F6A1968FEE67553E06B453 /* Pods-Mooc2022.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mooc2022.debug.xcconfig"; path = "Target Support Files/Pods-Mooc2022/Pods-Mooc2022.debug.xcconfig"; sourceTree = "<group>"; };
 		4504DE52288F02F000D318A0 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		45340F65288FB9A70050425A /* LogViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LogViewController.storyboard; sourceTree = "<group>"; };
@@ -182,6 +188,7 @@
 				21EB3A62289902810056D9EB /* HomeCoordinator.swift */,
 				21EB3A64289913880056D9EB /* ListCoordinator.swift */,
 				21EB3A662899171A0056D9EB /* UserCoordinator.swift */,
+				21EB3A6D28993B330056D9EB /* FavoriteCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -189,6 +196,7 @@
 		218B0678287FB84400EB4430 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				21EB3A68289938C30056D9EB /* Favorite */,
 				21EB3A5D2898BF580056D9EB /* User */,
 				21B3BD4E287FF92700363C06 /* Login */,
 				21B3BD4B287FD0C400363C06 /* Authentication */,
@@ -394,6 +402,15 @@
 			name = User;
 			sourceTree = "<group>";
 		};
+		21EB3A68289938C30056D9EB /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				21EB3A6928993AD60056D9EB /* FavoriteViewController.swift */,
+				21EB3A6A28993AD60056D9EB /* FavoriteViewController.xib */,
+			);
+			name = Favorite;
+			sourceTree = "<group>";
+		};
 		2BAA36429EDF83C6058577D5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -489,6 +506,7 @@
 				45340F66288FB9A70050425A /* LogViewController.storyboard in Resources */,
 				215F54FE287C1EA700B6653A /* HomeViewController.xib in Resources */,
 				E856AC16287D45A10069C3B4 /* MovieCell.xib in Resources */,
+				21EB3A6C28993AD60056D9EB /* FavoriteViewController.xib in Resources */,
 				45F51BE828855D7500E84673 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -550,6 +568,7 @@
 				215F54FD287C1EA700B6653A /* HomeViewController.swift in Sources */,
 				21B1BC612890EBC500E238D5 /* MovieRepositoryProtocol.swift in Sources */,
 				4504DE53288F02F000D318A0 /* FirebaseManager.swift in Sources */,
+				21EB3A6E28993B340056D9EB /* FavoriteCoordinator.swift in Sources */,
 				458ECBAE288EC76B005DB0F1 /* LogViewController.swift in Sources */,
 				215F54FA287C1E6700B6653A /* BaseViewController.swift in Sources */,
 				21B1BC6E289127BA00E238D5 /* ListMovieModelProtocol.swift in Sources */,
@@ -564,6 +583,7 @@
 				215F5503287C287F00B6653A /* ListViewController.swift in Sources */,
 				21B4562A288F8D70006B42D5 /* MainCoordinator.swift in Sources */,
 				21B3BD3D287FC29800363C06 /* UIView+Extensions.swift in Sources */,
+				21EB3A6B28993AD60056D9EB /* FavoriteViewController.swift in Sources */,
 				215F54E6287C1CD200B6653A /* AppDelegate.swift in Sources */,
 				21B3BD35287FBAA900363C06 /* BaseNibView.swift in Sources */,
 				21B1BC662891152A00E238D5 /* AppDependencyProvider.swift in Sources */,
