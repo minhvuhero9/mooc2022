@@ -11,21 +11,23 @@ class FirebaseManager {
     static let shared = FirebaseManager()
     let ref = Database.database().reference()
     
-    func fetchFavorite(completion : @escaping (DataSnapshot?) -> Void) {
+    func fetchFavorite(completion : @escaping ([Int]) -> Void) {
         guard let userID = LoginService.shared.currentUser?.uid else {
-            completion(nil)
+            Log.error.out("Current user not found.")
             return
         }
-        ref.child("Favorites/\(userID)").getData { (error, snapshot) in
+        ref.child("Favorites/\(userID)").getData { [weak self] (error, snapshot) in
+            guard let self = self else { return }
             if let error = error {
-                Log.debug.out("Error getting data \(error)")
+                Log.error.out("Error getting data \(error)")
                 return
             }
             
             if let data = snapshot, data.exists() {
-                completion(data)
+                let listID = self.parseFavoriteIDMovie(data)
+                completion(listID)
             } else {
-                Log.debug.out("No data available")
+                Log.error.out("No data available")
             }
         }
     }
@@ -33,14 +35,14 @@ class FirebaseManager {
     func fetchPopularMovies(completion : @escaping (DataSnapshot) -> Void) {
         ref.child("Popular").getData { (error, snapshot) in
             if let error = error {
-                Log.debug.out("Error getting data \(error)")
+                Log.error.out("Error getting data \(error)")
                 return
             }
             
             if let data = snapshot, data.exists() {
                 completion(data)
             } else {
-                Log.debug.out("No data available")
+                Log.error.out("No data available")
             }
         }
     }
@@ -50,14 +52,14 @@ class FirebaseManager {
         if let currentUser = LoginService.shared.currentUser {
             self.ref.child("UserProfiles").child(currentUser.uid).getData { (error, snapshot) in
                 if let error = error {
-                    Log.debug.out("Error getting data \(error)")
+                    Log.error.out("Error getting data \(error)")
                     return
                 }
                 
                 if let data = snapshot, data.exists() {
                     completion(data)
                 } else {
-                    Log.debug.out("No data available")
+                    Log.error.out("No data available")
                 }
             }
         }
@@ -81,25 +83,27 @@ class FirebaseManager {
         })
     }
     
-//    func insertFavorite(movies: [MovieModel]) {
-//        guard let userID = LoginService.shared.currentUser?.uid else {
-//            return
-//        }
-//        let path = "Favorites/\(userID)"
-//        movies.forEach({ movie in
-//            guard movie.id != nil else {
-//                return
-//            }
-//            ref.child(path).child((String(describing: movie.id!))).setValue(true) {
-//              (error:Error?, ref:DatabaseReference) in
-//              if let error = error {
-//                print("Data could not be saved: \(error).")
-//              } else {
-//                print("Data saved successfully!")
-//              }
-//            }
-//        })
-//    }
+    func insertFavorite(movies: [Movie]) {
+        guard let userID = LoginService.shared.currentUser?.uid else {
+            Log.error.out("User current not found.")
+            return
+        }
+        let path = "Favorites/\(userID)"
+        movies.forEach({ movie in
+            guard movie.id == 0 else {
+                Log.error.out("Cannot add movie with id = 0")
+                return
+            }
+            ref.child(path).child((String(describing: movie.id))).setValue(true) {
+              (error:Error?, ref:DatabaseReference) in
+              if let error = error {
+                print("Data could not be saved: \(error).")
+              } else {
+                print("Data saved successfully!")
+              }
+            }
+        })
+    }
     
     private func updateUser(user: UserProfile, isNewUser: Bool) -> Bool {
         if let currentUser = LoginService.shared.currentUser, currentUser.uid == user.userId {
@@ -125,6 +129,19 @@ class FirebaseManager {
         let isNewUser = object["is_new_user"] as! Int
         
         return UserProfile(userId: userID, name: name, email: email, phoneNumber: phoneNumber, imgAvatarUrl: imgAvatarUrl, isNewUser: isNewUser == 1 ? true : false)
+    }
+    
+    func parseFavoriteIDMovie(_ dataSnapshot: DataSnapshot) -> [Int] {
+        var results = [Int]()
+        if let listIDMovie = dataSnapshot.value as? [String: AnyObject],
+           listIDMovie.count > 0 {
+            for (key, _) in listIDMovie {
+                if let id = Int(key) {
+                    results.append(id)
+                }
+            }
+        }
+        return results
     }
 }
 
